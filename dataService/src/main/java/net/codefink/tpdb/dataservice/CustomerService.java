@@ -7,9 +7,9 @@ public class CustomerService {
 
   public String registerCustomer(CustomerRegistrationRequest request) {
     Customer customer = Customer.builder()
-        .firstName(request.firstName())
-        .lastName(request.lastName())
-        .email(request.email())
+        .firstName(request.getFirstName())
+        .lastName(request.getLastName())
+        .email(request.getEmail())
         .build();
     return "Customer registered with firstName " + customer.getFirstName();
   }
