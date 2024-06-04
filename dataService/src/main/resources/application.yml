@@ -1,0 +1,6 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: 'TPDB data-service'
+    version: '0.0.1-snapshot'
