@@ -56,11 +56,6 @@
                     <artifactId>spring-boot-maven-plugin</artifactId>
                     <version>${spring.boot.maven.plugin.version}</version>
                 </plugin>
-                <plugin>
-                    <groupId>org.jacoco</groupId>
-                    <artifactId>jacoco-maven-plugin</artifactId>
-                    <version>0.8.6</version>
-                </plugin>
             </plugins>
         </pluginManagement>
         <plugins>
@@ -79,6 +74,7 @@
                         <goals>
                             <goal>report</goal>
                         </goals>
+
                     </execution>
                 </executions>
             </plugin>
