@@ -14,7 +14,7 @@
     <modules>
         <module>dataService</module>
         <module>wikiService</module>
-        <module>aggregate-report</module>
+
     </modules>
 
     <properties>
@@ -60,5 +60,36 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.8</version>
+                <executions>
+                    <execution>
+                        <id>jacoco-site-aggregate</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report-aggregate</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.basedir}/.qodana/code-coverage/</outputDirectory>
+                            <formats>XML</formats>
+                            <includes>
+                                <include>org/example/**</include>
+                            </includes>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+
     </build>
 </project>
