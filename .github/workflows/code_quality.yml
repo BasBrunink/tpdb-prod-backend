@@ -6,7 +6,11 @@ on:
   push:
     branches:
       - main
-      - 'releases/*'
+      - development
+
+  pull_request_target:
+      types: [opened, synchronize, reopened]
+
 
 jobs:
   build:

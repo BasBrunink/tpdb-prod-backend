@@ -4,8 +4,5 @@
    |  |   |  | --' |  '--'  /|  '--' /
    `--'   `--'     `-------' `------'
 
-${application.title} ${application.version}
-Powered by Spring Boot ${spring-boot.version}-'
-
-${spring.application.name} ${spring.application.version}
+${spring.application.name}
 Powered by Spring Boot ${spring-boot.version}
