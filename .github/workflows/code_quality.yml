@@ -43,9 +43,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: maven-coverage-data
-          path: |
-            /dataService/.qodana/code-coverage
-            /wikiService/.qodana/code-coverage
+          path: .qodana/code-coverage
 
 
       - name: Qodana Scan
