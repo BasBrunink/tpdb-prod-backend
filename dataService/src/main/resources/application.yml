@@ -3,3 +3,14 @@ server:
 spring:
   application:
     name: 'TPDB data-service'
+    datasource:
+        url: jdbc:postgresql://localhost:5433/tpdb-data
+        username: tpdb
+        password: tpdb_secret
+    jpa:
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+          form_sql: true
+      hibernate:
+        ddl-auto: update
