@@ -22,13 +22,13 @@ class CustomerServiceTests {
     MockitoAnnotations.openMocks(this);
   }
 
-//  @Test
-//  @DisplayName("Should register customer successfully")
-//  void registerCustomer() {
-//    CustomerRegistrationRequest request = new CustomerRegistrationRequest("John", "Doe", "test@example.com");
-//    String result = customerService.registerCustomer(request);
-//    assertEquals("Customer registered with firstName John", result);
-//
-//
-//  }
+  @Test
+  @DisplayName("Should register customer successfully")
+  void registerCustomer() {
+    CustomerRegistrationRequest request = new CustomerRegistrationRequest("John", "Doe", "test@example.com");
+    String result = customerService.registerCustomer(request);
+    assertEquals("Customer registered with firstName John", result);
+
+
+  }
 }
