@@ -1,4 +1,5 @@
-name: Qodana
+name: IntelliJ Agent - Maven Test
+
 on:
   workflow_dispatch:
   pull_request:
@@ -28,17 +29,17 @@ jobs:
 
       - name: Validate Maven Wrapper
         run: mvn --version
-
+        working-directory: JVM/intellij-coverage-agent/maven
 
       - name: Run Tests
         run: mvn test
-
+        working-directory: JVM/intellij-coverage-agent/maven
 
       - name: Archive coverage data
         uses: actions/upload-artifact@v2
         with:
           name: maven-coverage-data
-          path: .qodana/code-coverage
+          path: JVM/intellij-coverage-agent/maven/.qodana/code-coverage
 
       - name: Qodana Scan
         uses: JetBrains/qodana-action@main
