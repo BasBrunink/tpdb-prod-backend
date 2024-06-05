@@ -43,7 +43,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: maven-coverage-data
-          path: tpdb-backend/aggregate-report/target/site/jacoco-aggregate
+          path: /home/runner/work/tpdb-prod-backend/tpdb-prod-backend/aggregate-report/target/site/jacoco-aggregate/jacoco.xml
 
 
 
