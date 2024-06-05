@@ -39,11 +39,11 @@ jobs:
         run: mvn test
 
 
-      - name: Archive coverage data-service
+      - name: Archive coverage data
         uses: actions/upload-artifact@v2
         with:
           name: maven-coverage-data
-          path: aggregate-report/target/site/jacoco-aggregate
+          path: ${{project.basedir}}/aggregate-report/target/site/jacoco-aggregate
 
 
 
