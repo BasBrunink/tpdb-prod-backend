@@ -43,11 +43,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: maven-coverage-data
-          file: jacoco.xml
-          path: aggregate-report/target/site/jacoco-aggregate
-
-
-
+          path: aggregate-report/target/site/jacoco-aggregate/jacoco.xml
 
       - name: Qodana Scan
         uses: JetBrains/qodana-action@main
