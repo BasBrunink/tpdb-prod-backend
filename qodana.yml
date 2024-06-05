@@ -1,3 +1,7 @@
 version: "1.0"
 profile:
   name: qodana.recommended
+failureConditions:
+  testCoverageThresholds:
+    fresh: 80
+    total: 80
