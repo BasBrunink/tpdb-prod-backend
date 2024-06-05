@@ -22,7 +22,7 @@
         <sonar.organization>basbrunink</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <intellij.coverage.agent.version>1.0.746</intellij.coverage.agent.version>
-        <intellij.agent.options>${project.basedir}/.qodana/code-coverage/output.ic,true,true,true,false</intellij.agent.options>
+        <intellij.agent.options>${project.basedir}/../.qodana/code-coverage/output.ic,true,true,true,false</intellij.agent.options>
 
         <spring.boot.maven.plugin.version>2.5.7</spring.boot.maven.plugin.version>
         <spring.boot.dependencies.version>2.5.7</spring.boot.dependencies.version>
