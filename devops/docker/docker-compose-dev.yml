@@ -1,0 +1,49 @@
+
+services:
+  postgres-data:
+    image: postgres:15
+    container_name: postgres-data
+    environment:
+      POSTGRES_USER: tpdb
+      POSTGRES_PASSWORD: tpdb_secret
+      POSTGRES_DB: tpdb-data
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - tpdb
+  postgres-wiki:
+    image: postgres:15
+    container_name: postgres-wiki
+    environment:
+      POSTGRES_USER: tpdb
+      POSTGRES_PASSWORD: tpdb_secret
+      POSTGRES_DB: tpdb-wiki
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres-wiki:/var/lib/postgresql/data
+    networks:
+      - tpdb
+
+  postgres-user:
+    image: postgres:15
+    container_name: postgres-user
+    environment:
+      POSTGRES_USER: tpdb
+      POSTGRES_PASSWORD: tpdb_secret
+      POSTGRES_DB: tpdb-user
+    ports:
+      - "5435:5432"
+    volumes:
+      - postgres-user:/var/lib/postgresql/data
+    networks:
+      - tpdb
+volumes:
+    postgres-data:
+    postgres-wiki:
+    postgres-user:
+networks:
+  tpdb:
+    driver: bridge

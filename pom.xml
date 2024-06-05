@@ -13,6 +13,7 @@
     <url>https://www.example.com</url>
     <modules>
         <module>dataService</module>
+        <module>wikiService</module>
     </modules>
 
     <properties>
