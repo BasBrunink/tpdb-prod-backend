@@ -36,7 +36,7 @@ jobs:
 
 
       - name: Run Tests
-        run: mvn test
+        run: mvn verify
 
 
       - name: Archive coverage data
