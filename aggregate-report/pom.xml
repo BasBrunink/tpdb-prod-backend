@@ -41,6 +41,20 @@
                             <goal>report-aggregate</goal>
                         </goals>
                     </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.basedir}/.qodana/code-coverage/</outputDirectory>
+                            <formats>XML</formats>
+                            <includes>
+                                <include>org/example/**</include>
+                            </includes>
+                        </configuration>
+                    </execution>
                 </executions>
             </plugin>
         </plugins>
