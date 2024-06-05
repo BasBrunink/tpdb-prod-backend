@@ -9,9 +9,6 @@ profile:
 #Enable inspections
 include:
   - name: JvmCoverageInspection
-    paths:
-      - dataService/src/main/java
-      - dataService/src/test/java
 #Disable inspections
 #exclude:
 #  - name: <SomeDisabledInspectionId>
