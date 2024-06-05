@@ -43,7 +43,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: maven-coverage-data
-          path: ${{project.basedir}}/aggregate-report/target/site/jacoco-aggregate
+          path: ./aggregate-report/target/site/jacoco-aggregate
 
 
 
