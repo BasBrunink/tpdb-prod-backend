@@ -1,4 +1,4 @@
-name: IntelliJ Agent - Maven Test
+name: TPDB backend Qodana Scan
 
 on:
   workflow_dispatch:
