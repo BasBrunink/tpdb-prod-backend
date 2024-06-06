@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: maven-coverage-data-jacoco
-          path: .qodana/code-coverage
+          path: .qodana/code-coverage/jacoco.xml
 
       - name: Qodana Scan
         uses: JetBrains/qodana-action@main
