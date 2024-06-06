@@ -12,7 +12,7 @@
     <name>tpdb-backend</name>
     <url>https://www.example.com</url>
     <modules>
-        <module>dataService</module>
+<!--        <module>dataService</module>-->
         <module>wikiService</module>
         <module>aggregate-report</module>
 

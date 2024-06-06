@@ -17,11 +17,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>net.codefink.tpdb</groupId>
-            <artifactId>dataService</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>net.codefink.tpdb</groupId>-->
+<!--            <artifactId>dataService</artifactId>-->
+<!--            <version>1.0-SNAPSHOT</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>net.codefink.tpdb</groupId>
             <artifactId>wikiService</artifactId>
