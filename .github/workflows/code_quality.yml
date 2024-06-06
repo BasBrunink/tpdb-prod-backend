@@ -43,7 +43,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: maven-coverage-data
-          path: .qodana/code-coverage
+          path: results/jacoco.xml
 
       - name: Qodana Scan
         uses: JetBrains/qodana-action@main
