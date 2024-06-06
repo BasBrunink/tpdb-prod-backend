@@ -1,4 +1,4 @@
-name: TPDB backend Qodana Scan
+name: JaCoCo Agent - Maven Test
 
 on:
   workflow_dispatch:
@@ -6,11 +6,7 @@ on:
   push:
     branches:
       - main
-      - development
-
-  pull_request_target:
-      types: [opened, synchronize, reopened]
-
+      - 'releases/*'
 
 jobs:
   build:
@@ -19,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
@@ -33,21 +29,22 @@ jobs:
 
       - name: Validate Maven Wrapper
         run: mvn --version
-
+        working-directory: JVM/jacoco/maven
 
       - name: Run Tests
-        run: mvn verify
-
+        run: mvn test
+        working-directory: JVM/jacoco/maven
 
       - name: Archive coverage data
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
-          name: maven-coverage-data
-          path: results/jacoco.xml
+          name: maven-coverage-data-jacoco
+          path: JVM/jacoco/maven/.qodana/code-coverage
 
       - name: Qodana Scan
         uses: JetBrains/qodana-action@main
         env:
-          QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
+          QODANA_TOKEN: ${{ secrets.QODANA_TOKEN_MVN_JACOCO }}
         with:
+          args: "-i,JVM/jacoco/maven,--linter,jetbrains/qodana-jvm:2023.3-eap"
           pr-mode: false
