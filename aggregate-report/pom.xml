@@ -44,7 +44,7 @@
                             <dataFileIncludes>
                                 <dataFileInclude>**/jacoco.exec</dataFileInclude>
                             </dataFileIncludes>
-                            <outputDirectory>${project.basedir}/../results</outputDirectory>
+                            <outputDirectory>${project.basedir}/../.qodana/code-coverage</outputDirectory>
                         </configuration>
                     </execution>
 
